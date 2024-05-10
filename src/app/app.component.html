@@ -1,19 +1,26 @@
 <div>
-
-  <span [ngClass]="{'redText': activeClass}">Hello</span>
-  <p></p>
-  <button (click)="toggleActiveClass()">Active</button>
-  <p></p>
-  <span>Active: {{activeClass}}</span>
+  <p>NgFor</p>
+  <div *ngFor="let item of array">{{ item }}</div>
 
 </div>
 
 <div>
-
-  <span [ngStyle]="{'color': activeStyle ? 'red' : ''}">Hello</span>
-  <p></p>
-  <button (click)="toggleActiveStyle()">Active</button>
-
+  <p>NgIf</p>
+  <div *ngFor="let item of array">
+    <div *ngIf="item !== 'B'">{{ item }}</div>
+  </div>
 </div>
+
+<div>
+  <p>NgSwitch</p>
+  <div *ngFor="let item of array">
+    <div [ngSwitch]="item">
+      <div *ngSwitchCase="'A'">1</div>
+      <div *ngSwitchCase="'B'">2</div>
+      <div *ngSwitchCase="'C'">3</div>
+    </div>
+  </div>
+</div>
+
 
 <router-outlet></router-outlet>

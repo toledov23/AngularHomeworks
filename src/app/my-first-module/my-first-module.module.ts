@@ -5,6 +5,9 @@ import { MyFirstComponentComponent } from '../components/my-first-component/my-f
 import { ServiceTestService } from '../services/service-test.service';
 import { ServiceModuleTestService } from '../services/service-module-test.service';
 import { TestServiceComponentComponent } from '../components/test-service-component/test-service-component.component';
+import { PipesComponentComponent } from '../components/pipes-component/pipes-component.component';
+import { UpperCasePipe } from '../pipes/upper-case.pipe';
+
 
 const routes: Routes = [
   {
@@ -16,11 +19,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     MyFirstComponentComponent,
-    TestServiceComponentComponent
+    TestServiceComponentComponent,
+    PipesComponentComponent,
+    UpperCasePipe
   ],
   exports: [
     MyFirstComponentComponent,
-    TestServiceComponentComponent
+    TestServiceComponentComponent,
+    PipesComponentComponent
   ],
   imports: [
     CommonModule,

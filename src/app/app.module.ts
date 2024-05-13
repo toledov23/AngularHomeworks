@@ -11,7 +11,7 @@ import { RootInjectableModule } from './root-injectable/root-injectable.module';
 @NgModule({
   declarations: [
     AppComponent,
-    CapitalizeDirective,
+    CapitalizeDirective
   ],
   imports: [
     BrowserModule,

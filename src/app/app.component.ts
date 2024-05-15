@@ -6,16 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AngularHomeworks';
-  activeClass: boolean = false;
-  activeStyle: boolean = false;
+  // activeStyle: boolean = false;
 
-  toggleActiveClass() {
-    this.activeClass = !this.activeClass;
-  }
-
-  toggleActiveStyle() {
+  /* toggleActiveStyle() {
     this.activeStyle = !this.activeStyle;
-  }
+  } */
 
 }

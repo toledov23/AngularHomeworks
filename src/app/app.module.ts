@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CapitalizeDirective } from './directives/capitalize.directive';
 import { MyFirstModuleModule } from './my-first-module/my-first-module.module';
+import { RootInjectableModule } from './root-injectable/root-injectable.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MyFirstModuleModule } from './my-first-module/my-first-module.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MyFirstModuleModule
+    MyFirstModuleModule,
+    RootInjectableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

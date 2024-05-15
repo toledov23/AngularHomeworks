@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceModuleTestService } from 'src/app/services/service-module-test.service';
+import { ServiceTestService } from 'src/app/services/service-test.service';
 
 @Component({
   selector: 'app-my-first-component',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyFirstComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public myService: ServiceTestService,
+    public service: ServiceModuleTestService
+  ) { }
 
   ngOnInit(): void {
   }

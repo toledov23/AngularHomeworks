@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 export class DirectivesComponent {
   title = 'AngularHomeworks';
   activeClass: boolean = false;
+  activeStyle: boolean = false;
 
   toggleActiveClass() {
     this.activeClass = !this.activeClass;
+  }
+
+  toggleActiveStyle() {
+    this.activeStyle = !this.activeStyle;
   }
 
 }

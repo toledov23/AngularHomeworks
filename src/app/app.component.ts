@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   array: string[] = ['A', 'B', 'C']
+  text: string = "Hello World";
+  textTwo: string = "Hello World";
+
+  showAlert(): void {
+    alert("Event Binding working");
+  }
+
 }

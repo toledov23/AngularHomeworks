@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CapitalizeDirective } from './directives/capitalize.directive';
 import { MyFirstModuleModule } from './my-first-module/my-first-module.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

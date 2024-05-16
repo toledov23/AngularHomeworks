@@ -7,19 +7,23 @@ import { AppComponent } from './app.component';
 import { CapitalizeDirective } from './directives/capitalize.directive';
 import { MyFirstModuleModule } from './my-first-module/my-first-module.module';
 import { RootInjectableModule } from './root-injectable/root-injectable.module';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CapitalizeDirective
+    CapitalizeDirective,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MyFirstModuleModule,
-    RootInjectableModule
+    RootInjectableModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

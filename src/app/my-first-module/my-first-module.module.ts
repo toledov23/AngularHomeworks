@@ -10,12 +10,17 @@ import { UpperCasePipe } from '../pipes/upper-case.pipe';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from '../components/home/home.component';
 
 
 const routes: Routes = [
   {
     path: '',
     component: MyFirstComponentComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   }
 ];
 
@@ -24,7 +29,8 @@ const routes: Routes = [
     MyFirstComponentComponent,
     TestServiceComponentComponent,
     PipesComponentComponent,
-    UpperCasePipe
+    UpperCasePipe,
+    HomeComponent
   ],
   exports: [
     MyFirstComponentComponent,

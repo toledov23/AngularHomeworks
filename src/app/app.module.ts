@@ -15,7 +15,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
   declarations: [
     AppComponent,
     CapitalizeDirective,
-    DialogComponent
+    DialogComponent,
   ],
   imports: [
     BrowserModule,

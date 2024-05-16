@@ -7,6 +7,9 @@ import { ServiceModuleTestService } from '../services/service-module-test.servic
 import { TestServiceComponentComponent } from '../components/test-service-component/test-service-component.component';
 import { PipesComponentComponent } from '../components/pipes-component/pipes-component.component';
 import { UpperCasePipe } from '../pipes/upper-case.pipe';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -30,8 +33,11 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
-  ],
+    RouterModule.forChild(routes),
+    MatButtonModule,
+    MatDialogModule,
+    FormsModule
+    ],
   providers: [
     ServiceTestService,
     ServiceModuleTestService

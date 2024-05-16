@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from '../components/home/home.component';
+import { ParentComponent } from '../components/parent/parent.component';
+import { ChildComponent } from '../components/child/child.component';
 
 
 const routes: Routes = [
@@ -21,7 +23,15 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  }
+  },
+  { path: 'rootTest', loadChildren: () => import('../route/route.module').then(m => m.RouteModule) },
+  {
+    path: 'parent',
+    component: ParentComponent,
+    children: [
+      { path: ':slug', component: ChildComponent },
+    ]
+  },
 ];
 
 @NgModule({
@@ -30,7 +40,9 @@ const routes: Routes = [
     TestServiceComponentComponent,
     PipesComponentComponent,
     UpperCasePipe,
-    HomeComponent
+    HomeComponent,
+    ParentComponent,
+    ChildComponent
   ],
   exports: [
     MyFirstComponentComponent,
